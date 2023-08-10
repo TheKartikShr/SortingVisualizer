@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-3 mb-2 mu-2 text-dark mainClass">
+    
+    <header>
+        <h1 align="center" class="text-white">Sorting Visualizer</h1>
+        <nav>
+            <div class="row">
+                <div class="col gap-2 d-sm-flex" id="newArray">
+                    <button type="button" class="btn btn-lg btn-outline-success btn-dark newArray">New Array</button>
+                </div>
+                <div class="col" id="input">
+                    <span id="size" class="text-white">Size
+                        <input id="arr_sz" type="range" min="5" max="100" step="1" value="60">
+                    </span>
+                    <span id="speed" class="text-white">Speed
+                        <input id="speed_input" type="range" min="20" max="500" stepDown=10 value=60>
+                    </span>
+                </div>
+                <div class="col gap-2 d-sm-flex justify-content-end">
+                    <button type="button" class="btn btn-outline-primary btn-dark bubbleSort">Bubble Sort</button>
+                    <button type="button" class="btn btn-outline-primary btn-dark selectionSort">Selection Sort</button>
+                    <button type="button" class="btn btn-outline-primary btn-dark insertionSort">Insertion Sort</button>
+                    <button type="button" class="btn btn-outline-primary btn-dark quickSort">Quick Sort</button>
+                    <button type="button" class="btn btn-outline-primary btn-dark mergeSort">Merge Sort</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+    
+        <div id="Info_Cont1">
+    
+            <h3 class="text-white">TIME COMPLEXITY</h3>
+    
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+    
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading text-white">Worst case:</p>
+                    <p id="Time_Worst" class="text-white"></p>
+                </div>
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading text-white">Average case:</p>
+                    <p id="Time_Average" class="text-white"></p>
+                </div>
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading text-white">Best case:</p>
+                    <p id="Time_Best" class="text-white"></p>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+        <div id="array_container">
+            
+        </div>
+    
+        <div id="Info_Cont2">
+    
+            <h3 class="text-white">SPACE COMPLEXITY</h3>
+    
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+    
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading text-white">Worst case:</p>
+                    <p id="Space_Worst" class="text-white"></p>
+                </div>
+                
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <div id="bars" class="flex-container">
+        
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js_Files/sorting.js"></script>
+    <script src="js_Files/bubble.js"></script>
+    <script src="js_Files/selection.js"></script>
+    <script src="js_Files/insertion.js"></script>
+    <script src="js_Files/quick.js"></script>
+    <script src="js_Files/merge.js"></script>
+</body>
+</html>
